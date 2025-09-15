@@ -40,14 +40,28 @@ namespace calculator_c_s
                             memory = res;
                             break;
                         case "/":
-                            res = num1 / num2;
-                            Console.WriteLine("Деление:" + res);
-                            memory = res;
+                            if (num2 == 0)
+                            {
+                                Console.WriteLine("Нельзя делить на ноль! Попробуйте ещё раз");
+                            }
+                            else
+                            {
+                                res = num1 / num2;
+                                Console.WriteLine("Деление:" + res);
+                                memory = res;
+                            }
                             break;
                         case "%":
-                            res = num1 % num2;
-                            Console.WriteLine("Остаток от деления:" + res);
-                            memory = res;
+                            if (num2 == 0)
+                            {
+                                Console.WriteLine("Нельзя делить на ноль! Попробуйте ещё раз");
+                            }
+                            else
+                            {
+                                res = num1 % num2;
+                                Console.WriteLine("Остаток от деления:" + res);
+                                memory = res;
+                            }
                             break;
                         default:
                             Console.WriteLine("Wrong input");
