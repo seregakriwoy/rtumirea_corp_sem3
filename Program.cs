@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Text;
 using System.Threading.Tasks;
-namespace calculator_c_s
+namespace colculatore
 {
     class Program
     {
@@ -26,17 +26,17 @@ namespace calculator_c_s
                     {
                         case "+":
                             res = num1 + num2;
-                            Console.WriteLine("Сложение:" + res);
+                            Console.WriteLine("Сложение: " + res);
                             memory = res;
                             break;
                         case "-":
                             res = num1 - num2;
-                            Console.WriteLine("Вычетание:" + res);
+                            Console.WriteLine("Вычетание: " + res);
                             memory = res;
                             break;
                         case "*":
                             res = num1 * num2;
-                            Console.WriteLine("Умножение:" + res);
+                            Console.WriteLine("Умножение: " + res);
                             memory = res;
                             break;
                         case "/":
@@ -47,7 +47,7 @@ namespace calculator_c_s
                             else
                             {
                                 res = num1 / num2;
-                                Console.WriteLine("Деление:" + res);
+                                Console.WriteLine("Деление: " + res);
                                 memory = res;
                             }
                             break;
@@ -59,7 +59,7 @@ namespace calculator_c_s
                             else
                             {
                                 res = num1 % num2;
-                                Console.WriteLine("Остаток от деления:" + res);
+                                Console.WriteLine("Остаток от деления: " + res);
                                 memory = res;
                             }
                             break;
@@ -82,13 +82,13 @@ namespace calculator_c_s
                             else
                             {
                                 res = 1 / num1;
-                                Console.WriteLine("1 делить на x:" + res);
+                                Console.WriteLine("1 делить на x: " + res);
                                 memory = res;
                             }
                             break;
                         case "x^2":
                             res = Math.Pow(num1, 2);
-                            Console.WriteLine("Число в квадрате:" + res);
+                            Console.WriteLine("Число в квадрате: " + res);
                             memory = res;
                             break;
                         case "sqrt(x)":
@@ -99,17 +99,17 @@ namespace calculator_c_s
                             else
                             {
                                 res = Math.Sqrt(num1);
-                                Console.WriteLine("Квадратный корень из x:" + res);
+                                Console.WriteLine("Квадратный корень из x: " + res);
                                 memory = res;
                             }
                             break;
                         case "M+":
                             memory += num1;
-                            Console.WriteLine("Прибавлено к памяти" + res);
+                            Console.WriteLine("Прибавлено к памяти " + num1);
                             break;
                         case "M-":
                             memory -= num1;
-                            Console.WriteLine("Вычтено из памяти" + res);
+                            Console.WriteLine("Вычтено из памяти " + num1);
                             break;
                         default:
                             Console.WriteLine("Wrong input");
@@ -118,11 +118,11 @@ namespace calculator_c_s
                 }
                 else if (symbol == "MR")
                 {
-                    Console.WriteLine("Значение в памяти:" + res);
+                    Console.WriteLine("Значение в памяти: " + memory);
                 }
                 else
                 {
-                    Console.WriteLine("Некорректныйе данные! Попробуйте ещё раз");
+                    Console.WriteLine("Некорректные данные! Попробуйте ещё раз");
                 }
 
                 Console.ReadLine();
